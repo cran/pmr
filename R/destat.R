@@ -7,7 +7,9 @@ paircom <- matrix(data = 0, nrow = nitem, ncol = nitem, byrow = TRUE)
 marginal <- matrix(data = 0, nrow = nitem, ncol = nitem, byrow = TRUE)
 
 ## compute mean rank
-meanrank <- mean(dset[1:nitem])
+for (i in 1:nitem){
+meanrank[i] <- weighted.mean(dset[,i],dset[,nitem+1])
+}
 
 ## compute pair comparison
 for (i in 1:nrow(dset)){
