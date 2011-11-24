@@ -172,6 +172,18 @@ for (j in 1:factorial(nitem)){
 ss[j] <- (fitted[j] - test3[j,(nitem+1)])^2/fitted[j]
 }
 
-lst <- list(modal.ranking=modal, loglik=up$value, par=up$par, se=(diag(solve(up$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
-return(lst)
+#lst <- list(modal.ranking=modal, loglik=up$value, par=up$par, se=(diag(solve(up$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
+#return(lst)
+require(stats4)
+message("Modal ranking: ", modal)
+message("Chi-square residual statistic: ", round(sum(ss), digits = 2), ", df: ", factorial(nitem))
+out2 <- new("mle")
+out2@coef <- up$par
+out2@fullcoef <- up$par
+out2@vcov <- solve(up$hessian)
+out2@min <- up$value
+out2@details <- up
+out2@minuslogl <- loglik_wdbm
+out2@method <- "BFGS"
+return(out2)
 }

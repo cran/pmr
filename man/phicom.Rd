@@ -18,18 +18,18 @@ a ranking dataset
 
 }
 \details{
-Fit the phi-component models for the dataset.
+Fit the phi-component models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The modal ranking and the Chi-square residual are given in the output.
 }
-\value{
+%%\value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
-\item{modal.ranking}{The modal ranking of the dataset.}
-\item{loglik}{Loglikelihood.}
-\item{par}{Estimate of the dispersion parameter.}
-\item{se}{Standard error of the estimate.}
-\item{fit.value}{Fitted values of the model.}
-\item{residual}{Pearson sum of square residual of the model.}
-}
+%%\item{modal.ranking}{The modal ranking of the dataset.}
+%%\item{loglik}{Loglikelihood.}
+%%\item{par}{Estimate of the dispersion parameter.}
+%%\item{se}{Standard error of the estimate.}
+%%\item{fit.value}{Fitted values of the model.}
+%%\item{residual}{Pearson sum of square residual of the model.}
+%%}
 \references{
 Fligner, M. A., and Verducci, J. S. (1986) Distance based ranking models. Journal of the Royal Statistical Society Series B, 48(3), 359-369.
 }

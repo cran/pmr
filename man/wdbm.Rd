@@ -20,16 +20,16 @@ type of weighted distance. tau : Kendall's tau, rho : Spearman's rho, rho2 : Spe
 }
 }
 \details{
-Fit the weighted distance-based models for the dataset.
+Fit the weighted distance-based models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The modal ranking and the Chi-square residual are given in the output.
 }
-\value{
-\item{modal.ranking}{The modal ranking of the dataset.}
-\item{loglik}{Loglikelihood.}
-\item{par}{Estimate of the weights. Note that weights are sorted according to items instead of modal ranking.}
-\item{se}{Standard error of the estimates.}
-\item{fit.value}{Fitted values of the model.}
-\item{residual}{Pearson sum of square residual of the model.}
-}
+%%\value{
+%%\item{modal.ranking}{The modal ranking of the dataset.}
+%%\item{loglik}{Loglikelihood.}
+%%\item{par}{Estimate of the weights. Note that weights are sorted according to items instead of modal ranking.}
+%%\item{se}{Standard error of the estimates.}
+%%\item{fit.value}{Fitted values of the model.}
+%%\item{residual}{Pearson sum of square residual of the model.}
+%%}
 \references{
 Lee, P. H., and Yu, P. L. H. (2010) Distance-based tree models for ranking data. Computational Statistics and Data Analysis, 54(6), 1672-1682.
 }

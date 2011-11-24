@@ -1,30 +1,33 @@
-\name{rinv}
-\alias{rinv}
+\name{rankplot}
+\alias{rankplot}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Inverse of a ranking dataset.
+Visualizing rankings of 3 or 4 items by plot.
 }
 \description{
-Computing the inverse of a ranking dataset.
+Display rankings of 3 items by hexagon and 4 items by truncated octahedron. Each line linking two points represents a Kendall distance of one. The size of the point is proportional to the frequency of that particular ranking.
 }
 \usage{
-rinv(dset)
+rankplot(dset,trans=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dset}{
 a ranking dataset
 }
+\item{trans}{
+(For 4-item ranking dataset) Another representation of the rankings. 
+}
 }
 %%\details{
 %%  ~~ If necessary, more details than the description above ~~
 %%}
-\value{
-Return the dataset which is the orderings of the original ranking data.
-}
-%%\references{
-%% ~put references to the literature/web site here ~
+%%\value{
+
 %%}
+\references{
+Thompson, G. L. (1993). Graphical techniques for ranked data. In Fligner, M. A., and Verducci, J. S. (eds.) Probability Models and Statistical Analyses for Ranking Data, pp. 294-298.
+}
 \author{
 Paul H. Lee and Philip L. H. Yu
 }
@@ -45,10 +48,10 @@ X3 <- c(3,2,3,1,2,1)
 n <- c(6,5,4,3,2,1)
 test <- data.frame(X1,X2,X3,n)
 
-## compute the inverse of the artificial dataset
-rinv(test)
+## multidimensional preference analysis of the artificial dataset
+rankplot(test)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{rinv}
+\keyword{rankplot}
 

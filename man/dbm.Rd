@@ -20,18 +20,18 @@ type of distance. tau : Kendall's tau, rho : Spearman's rho, rho2 : Spearman's r
 }
 }
 \details{
-Fit the distance-based models for the dataset.
+Fit the distance-based models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The modal ranking and the Chi-square residual are given in the output.
 }
-\value{
+%%\value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
-\item{modal.ranking}{The modal ranking of the dataset.}
-\item{loglik}{Loglikelihood.}
-\item{par}{Estimate of the dispersion parameter.}
-\item{se}{Standard error of the estimate.}
-\item{fit.value}{Fitted values of the model.}
-\item{residual}{Pearson sum of square residual of the model.}
-}
+%%\item{modal.ranking}{The modal ranking of the dataset.}
+%%\item{loglik}{Loglikelihood.}
+%%\item{par}{Estimate of the dispersion parameter.}
+%%\item{se}{Standard error of the estimate.}
+%%\item{fit.value}{Fitted values of the model.}
+%%\item{residual}{Pearson sum of square residual of the model.}
+%%}
 %%\references{
 %% ~put references to the literature/web site here ~
 %%}

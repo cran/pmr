@@ -1,26 +1,26 @@
-\name{rinv}
-\alias{rinv}
+\name{rankagg}
+\alias{rankagg}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Inverse of a ranking dataset.
 }
 \description{
-Computing the inverse of a ranking dataset.
+Turn individual rankings into a summary matrix.
 }
 \usage{
-rinv(dset)
+rankagg(dset)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dset}{
-a ranking dataset
+each row represent a single ranking
 }
 }
 %%\details{
 %%  ~~ If necessary, more details than the description above ~~
 %%}
 \value{
-Return the dataset which is the orderings of the original ranking data.
+Return the dataset which summarize the original ranking data.
 }
 %%\references{
 %% ~put references to the literature/web site here ~
@@ -42,13 +42,12 @@ Paul H. Lee and Philip L. H. Yu
 X1 <- c(1,1,2,2,3,3)
 X2 <- c(2,3,1,3,1,2)
 X3 <- c(3,2,3,1,2,1)
-n <- c(6,5,4,3,2,1)
-test <- data.frame(X1,X2,X3,n)
+test <- data.frame(X1,X2,X3)
 
-## compute the inverse of the artificial dataset
-rinv(test)
+## aggregate the ranking of all the observations and create a summary matrix
+test2 <- rankagg(test)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{rinv}
+\keyword{rankagg}
 

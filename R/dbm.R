@@ -130,7 +130,7 @@ sum(ll)
 }
 
 out1 <- optim(c(1), loglik_dbm, NULL, method = "BFGS", hessian = TRUE)
-
+require(stats4)
 ## compute expected value
 ed <- rep(0,factorial(nitem))
 for (j in 1:factorial(nitem)){
@@ -146,6 +146,17 @@ for (j in 1:factorial(nitem)){
 ss[j] <- (fitted[j] - test3[j,(nitem+1)])^2/fitted[j]
 }
 
-lst <- list(modal.ranking=modal, loglik=out1$value, par=out1$par, se=(diag(solve(out1$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
-return(lst)
+#lst <- list(modal.ranking=modal, loglik=out1$value, par=out1$par, se=(diag(solve(out1$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
+#return(lst)
+message("Modal ranking: ", modal)
+message("Chi-square residual statistic: ", round(sum(ss), digits = 2), ", df: ", factorial(nitem))
+out2 <- new("mle")
+out2@coef <- out1$par
+out2@fullcoef <- out1$par
+out2@vcov <- solve(out1$hessian)
+out2@min <- out1$value
+out2@details <- out1
+out2@minuslogl <- loglik_dbm
+out2@method <- "BFGS"
+return(out2)
 }

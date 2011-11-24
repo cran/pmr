@@ -28,7 +28,7 @@ sum(ll)
 }
 
 out1 <- optim(rep(1,nitem), loglik_pl, NULL, method = "BFGS", hessian = TRUE)
-
+require(stats4)
 test <- matrix(data = 0, nrow = factorial(nitem), ncol = nitem, byrow = TRUE)
 temp1 <- 1:nitem
 i <- 1
@@ -87,6 +87,17 @@ for (j in 1:factorial(nitem)){
 ss[j] <- (fitted[j] - n[j])^2/fitted[j]
 }
 
-lst <- list(loglik=out1$value, par=out1$par, se=(diag(solve(out1$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
-return(lst)
+#lst <- list(loglik=out1$value, par=out1$par, se=(diag(solve(out1$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
+#return(lst)
+#message("Modal ranking: ", modal)
+message("Chi-square residual statistic: ", round(sum(ss), digits = 2), ", df: ", factorial(nitem))
+out2 <- new("mle")
+out2@coef <- out1$par
+out2@fullcoef <- out1$par
+out2@vcov <- solve(out1$hessian)
+out2@min <- out1$value
+out2@details <- out1
+out2@minuslogl <- loglik_pl
+out2@method <- "BFGS"
+return(out2)
 }
