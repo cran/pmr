@@ -2,7 +2,7 @@
 \alias{rankagg}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Inverse of a ranking dataset.
+Summary of a ranking dataset.
 }
 \description{
 Turn individual rankings into a summary matrix.
@@ -45,7 +45,7 @@ X3 <- c(3,2,3,1,2,1)
 test <- data.frame(X1,X2,X3)
 
 ## aggregate the ranking of all the observations and create a summary matrix
-test2 <- rankagg(test)
+## test2 <- rankagg(test)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

@@ -32,6 +32,7 @@ Fit the weighted distance-based models for the dataset and return a mle object. 
 %%}
 \references{
 Lee, P. H., and Yu, P. L. H. (2010) Distance-based tree models for ranking data. Computational Statistics and Data Analysis, 54(6), 1672-1682.
+Lee, P. H., and Yu, P. L. H. (2012) Mixtures of weighted distance-based models for ranking data with applications in political studies. Computational Statistics and Data Analysis, 56(8), 2486-2500.
 }
 \author{
 Paul H. Lee and Philip L. H. Yu
@@ -54,7 +55,7 @@ n <- c(6,5,4,3,2,1)
 test <- data.frame(X1,X2,X3,n)
 
 ## fit the weighted distance-based model with Spearman's foot distance
-wdbm(test,dtype="foot")
+## wdbm(test,dtype="foot")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

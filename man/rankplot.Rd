@@ -49,7 +49,7 @@ n <- c(6,5,4,3,2,1)
 test <- data.frame(X1,X2,X3,n)
 
 ## multidimensional preference analysis of the artificial dataset
-rankplot(test)
+## rankplot(test)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

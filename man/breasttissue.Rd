@@ -2,12 +2,12 @@
 \alias{breasttissue}
 \docType{data}
 \title{
-big4
+breasttissue
 }
 \description{
 Ranking of 4 breast cancer categories of 106 observations. The original dataset was a categorical one, and it was converted to the current ranking dataset by sorting the expected probabilities (computed by fitting a stepwise logistic regression) of the 4 categories.
 }
-\usage{data(big4)}
+\usage{data(breasttissue)}
 \format{
   A data frame with 106 observations on the following 4 variables.
   \describe{

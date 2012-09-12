@@ -28,5 +28,7 @@ marginal[j,dset[i,j]] <- marginal[j,dset[i,j]] + dset[i,nitem+1]
 }
 
 lst <- list(mean.rank=meanrank, pair=paircom, mar=marginal)
+message("Descriptive statistics of ranking data: ")
+message("$mean.rank: mean ranks; $pair: pairs; $mar: marginals")
 return(lst)
 }

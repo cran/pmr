@@ -148,6 +148,12 @@ ss[j] <- (fitted[j] - test3[j,(nitem+1)])^2/fitted[j]
 
 #lst <- list(modal.ranking=modal, loglik=out1$value, par=out1$par, se=(diag(solve(out1$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
 #return(lst)
+message("Maximum Likelihood Estimation of the Distance-based Model")
+dtype_full <- "Kendall's tau"
+if (dtype == "rho") dtype_full <- "Spearman's rho"
+if (dtype == "rho2") dtype_full <- "Spearman's rho square"
+if (dtype == "foot") dtype_full <- "Spearman's footrule"
+message("Distance type: ", dtype_full)
 message("Modal ranking: ", modal)
 message("Chi-square residual statistic: ", round(sum(ss), digits = 2), ", df: ", factorial(nitem))
 out2 <- new("mle")

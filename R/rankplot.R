@@ -58,7 +58,7 @@ freq[j] <- test2[i,4]
 }
 x = c(0,1,1.5,1,0,-0.5)
 y = c(0,0,-0.866,-1.732,-1.732,-0.866)
-symbols(x,y,circle=freq^0.5/sum(freq^0.5)/2,inches=FALSE)
+symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE)
 text(x,y,labels=label)
 polygon(x,y)
 }
@@ -87,7 +87,7 @@ else {
 x <- c(1,1.66,0.55,1.98,0.77,1.53,1.27,1.88,0.44,2.56,0.64,2.15,1.15,2.38,0.76,2.72,1.24,1.98,1.61,2.23,1.26,2.55,1.51,2.2)
 y <- c(-2.33,-2.55,-1.93,-2.37,-1.70,-1.93,-2.04,-2.23,-1.22,-1.83,-0.95,-1.36,-1.43,-1.77,-1.02,-1.55,-0.4,-0.58,-1,-1.15,-0.56,-0.88,-0.24,-0.4)
 }
-symbols(x,y,circle=freq^0.5/sum(freq^0.5)/2,inches=FALSE)
+symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE)
 text(x,y+0.1,labels=label)
 
 # draw the truncated octahedron

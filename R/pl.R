@@ -90,6 +90,7 @@ ss[j] <- (fitted[j] - n[j])^2/fitted[j]
 #lst <- list(loglik=out1$value, par=out1$par, se=(diag(solve(out1$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
 #return(lst)
 #message("Modal ranking: ", modal)
+message("Maximum Likelihood Estimation of the Luce Model")
 message("Chi-square residual statistic: ", round(sum(ss), digits = 2), ", df: ", factorial(nitem))
 out2 <- new("mle")
 out2@coef <- out1$par

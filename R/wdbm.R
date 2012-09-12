@@ -175,6 +175,12 @@ ss[j] <- (fitted[j] - test3[j,(nitem+1)])^2/fitted[j]
 #lst <- list(modal.ranking=modal, loglik=up$value, par=up$par, se=(diag(solve(up$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
 #return(lst)
 require(stats4)
+message("Maximum Likelihood Estimation of the Weighted Distance-based Model")
+dtype_full <- "Weighted Kendall's tau"
+if (dtype == "rho") dtype_full <- "Weighted Spearman's rho"
+if (dtype == "rho2") dtype_full <- "Weighted Spearman's rho square"
+if (dtype == "foot") dtype_full <- "Weighted Spearman's footrule"
+message("Distance type: ", dtype_full)
 message("Modal ranking: ", modal)
 message("Chi-square residual statistic: ", round(sum(ss), digits = 2), ", df: ", factorial(nitem))
 out2 <- new("mle")
