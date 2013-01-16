@@ -11,8 +11,8 @@ Probability models for ranking data.
 \tabular{ll}{
 Package: \tab pmr\cr
 Type: \tab Package\cr
-Version: \tab 1.1.0\cr
-Date: \tab 2011-07-04\cr
+Version: \tab 1.2.0\cr
+Date: \tab 2013-01-16\cr
 Depends: \tab stats4, graphics\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
@@ -26,6 +26,8 @@ Maintainer: Paul H. Lee <honglee@graduate.hku.hk>
 }
 \references{
 Marden, J. I. (1995) Analyzing and Modeling Rank Data. Chapman and Hall.
+
+Lee, P. H., and Yu, P. L. H. (2013) An R package for analyzing and modeling ranking data. BMC Medical Research Methodology, 13, 65.
 }
 \keyword{ranking data}
 %%\seealso{

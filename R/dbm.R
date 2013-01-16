@@ -129,12 +129,14 @@ ll[j] <- -log(pr[j])*test3[j,(nitem+1)]
 sum(ll)
 }
 
-out1 <- optim(c(1), loglik_dbm, NULL, method = "BFGS", hessian = TRUE)
 require(stats4)
+out1 <- optim(c(1), loglik_dbm, NULL, method = "BFGS", hessian = TRUE)
+##out1 <- mle(minuslogl = loglik_dbm, start = list(lambda=1), method = "BFGS", nobs=as.integer(sum(dset[,nitem+1])))
+
 ## compute expected value
 ed <- rep(0,factorial(nitem))
 for (j in 1:factorial(nitem)){
-ed[j] <- exp(-rdist(modal,test3[j,1:nitem])*out1$par)
+ed[j] <- exp(-rdist(modal,test3[j,1:nitem])*coef(out1))
 }
 pc <- sum(ed)
 fitted <- rep(0,factorial(nitem))

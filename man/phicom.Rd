@@ -5,7 +5,7 @@
 phi-component Models
 }
 \description{
-phi-component Models for ranking data
+phi-component Models for ranking data. The distance-based models assume that rankings closer to the modal ranking are more likely to be observed. Phi-component models are extensions of distance-based models with Kendall's distance by allowing weights at different stages.
 }
 \usage{
 phicom(dset)
@@ -13,12 +13,12 @@ phicom(dset)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dset}{
-a ranking dataset
+a ranking dataset (aggregated)
 }
 
 }
 \details{
-Fit the phi-component models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The modal ranking and the Chi-square residual are given in the output.
+Fit the phi-component models for the dataset and return a mle object. Standard methods on mle (e.g., @coef, @vcov) apply. The modal ranking and the Chi-square residual are given in the output.
 }
 %%\value{
 %%  ~Describe the value returned

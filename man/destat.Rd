@@ -2,10 +2,10 @@
 \alias{destat}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Descriptive statistics of a ranking dataset.
+Descriptive statistics of a ranking dataset
 }
 \description{
-Computing the descriptive statistics of a ranking dataset.
+Computing the descriptive statistics (mean rank, pairs matrix, and marginals matrix) of a ranking dataset.
 }
 \usage{
 destat(dset)
@@ -13,7 +13,7 @@ destat(dset)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dset}{
-a ranking dataset
+a ranking dataset (aggregated)
 }
 }
 %%\details{

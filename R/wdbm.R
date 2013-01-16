@@ -69,7 +69,7 @@ if (dtype == "foot"){
 wdist <- function(x,y,w){
 d <- 0
 for (j in 1:nitem){
-d <- d + abs(x[j] - y[j]) *w[modal[j]]
+d <- d + abs(x[j] - y[j]) *as.numeric(w[modal[j]])
 }
 d
 }
@@ -112,6 +112,7 @@ temp_modal <- 1:nitem
 mup <- 1
 while (mup == 1){
 ## loglikelihood function
+
 loglik_wdbm <- function(lambda){
 ed <- rep(0,factorial(nitem))
 for (j in 1:factorial(nitem)){
@@ -129,6 +130,7 @@ ll[j] <- -log(pr[j])*test3[j,(nitem+1)]
 sum(ll)
 }
 if (dtype!="phicom") {up <- optim(rep(1,nitem), loglik_wdbm, NULL, method = "BFGS", hessian = TRUE)}
+## if (dtype!="phicom") {up <- mle(minuslogl = loglik_wdbm, start = list(lambda=rep(1,nitem)), method = "BFGS", nobs=as.integer(sum(dset[,nitem+1])))}
 w_up <- up$par
 for (j in 1:nitem){
 temp_modal[j] <- modal[j]

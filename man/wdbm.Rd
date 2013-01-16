@@ -5,7 +5,7 @@
 Weighted Distance-based Models
 }
 \description{
-Weighted Distance-based Models for ranking data
+Weighted Distance-based Models for ranking data. The distance-based models assume that rankings closer to the modal ranking are more likely to be observed. Weighted distance-based models are extensions of distance-based models with by allowing weights for different items.
 }
 \usage{
 wdbm(dset, dtype="tau")
@@ -13,14 +13,14 @@ wdbm(dset, dtype="tau")
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dset}{
-a ranking dataset
+a ranking dataset (aggregated)
 }
   \item{dtype}{
-type of weighted distance. tau : Kendall's tau, rho : Spearman's rho, rho2 : Spearman's rho square, foot : footrule
+type of weighted distance between two rankings. tau : Kendall's tau, rho : Spearman's rho, rho2 : Spearman's rho square, foot : footrule
 }
 }
 \details{
-Fit the weighted distance-based models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The modal ranking and the Chi-square residual are given in the output.
+Fit the weighted distance-based models for the dataset and return a mle object. Standard methods on mle (e.g., @coef, @vcov) apply. The modal ranking and the Chi-square residual are given in the output.
 }
 %%\value{
 %%\item{modal.ranking}{The modal ranking of the dataset.}
@@ -32,6 +32,7 @@ Fit the weighted distance-based models for the dataset and return a mle object. 
 %%}
 \references{
 Lee, P. H., and Yu, P. L. H. (2010) Distance-based tree models for ranking data. Computational Statistics and Data Analysis, 54(6), 1672-1682.
+
 Lee, P. H., and Yu, P. L. H. (2012) Mixtures of weighted distance-based models for ranking data with applications in political studies. Computational Statistics and Data Analysis, 56(8), 2486-2500.
 }
 \author{

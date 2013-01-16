@@ -19,9 +19,9 @@ a ranking dataset
 (For 4-item ranking dataset) Another representation of the rankings. 
 }
 }
-%%\details{
-%%  ~~ If necessary, more details than the description above ~~
-%%}
+\details{
+As a ranking dataset of k items can be represented in k-1 dimensions, ranking data with 3 or 4 items can be represented in graphs without losing any information. For visualization of ranking data with more items, multidimensional preference analysis can be used.
+}
 %%\value{
 
 %%}

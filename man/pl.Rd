@@ -5,7 +5,7 @@
 The Luce Models
 }
 \description{
-The Luce Models for ranking data
+The Luce Models for ranking data. The Luce models assumed that the rankings of the items are proportional to the item parameters.
 }
 \usage{
 pl(dset)
@@ -13,11 +13,11 @@ pl(dset)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dset}{
-a ranking dataset
+a ranking dataset (aggregated)
 }
 }
 \details{
-Fit the Luce models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The Chi-square residual are given in the output.
+Fit the Luce models for the dataset and return a mle object. Standard methods on mle (e.g., @coef, @vcov) apply. The Chi-square residual are given in the output.
 }
 %%\value{
 %%  ~Describe the value returned

@@ -5,7 +5,7 @@
 Distance-based Models
 }
 \description{
-Distance-based Models for ranking data
+Distance-based Models for ranking data. The distance-based models assume that rankings closer to the modal ranking are more likely to be observed.
 }
 \usage{
 dbm(dset, dtype="tau")
@@ -16,11 +16,11 @@ dbm(dset, dtype="tau")
 a ranking dataset
 }
   \item{dtype}{
-type of distance. tau : Kendall's tau, rho : Spearman's rho, rho2 : Spearman's rho square, foot : footrule
+type of distance between two rankings. tau : Kendall's tau, rho : Spearman's rho, rho2 : Spearman's rho square, foot : footrule
 }
 }
 \details{
-Fit the distance-based models for the dataset and return a mle object. Standard methods on mle (e.g., AIC(), coef(), vcov()) apply. The modal ranking and the Chi-square residual are given in the output.
+Fit the distance-based models for the dataset and return a mle object. Standard methods on mle (e.g., @coef, @vcov) apply. The modal ranking and the Chi-square residual are given in the output.
 }
 %%\value{
 %%  ~Describe the value returned
