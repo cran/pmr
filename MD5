@@ -1,4 +1,4 @@
-558fa96b59cbe13c62fbd9a28b9f8518 *DESCRIPTION
+ce2e9a36e933586e5bfdd09b379673cb *DESCRIPTION
 6204ea2106eaa04a952378408cb5364e *NAMESPACE
 47c3b5938fb59f244dd8de773b829614 *R/ahp.R
 7596abbde182f99c1a3a70736774e1a9 *R/dbm.R
@@ -32,7 +32,7 @@ e425daf869ef478eac7971ce88c40ae7 *man/big4.Rd
 15ad6e4898db2b0d795d7209402779b5 *man/mdpref.Rd
 24d365fdc0c3fa86c203c11e5b1733aa *man/phicom.Rd
 e0ebdb647d2012a783a7b1e7c31552e3 *man/pl.Rd
-d942f362c554bd920ac3f9fc20e02f97 *man/pmr-package.Rd
+f478e9cc6eb2dcf6b66bdaa0abc87f15 *man/pmr-package.Rd
 37b1a01e8345d4aef17810f80c22504d *man/rankagg.Rd
 51bb5a5cd3486acccb9ee67988b6baf1 *man/rankplot.Rd
 46b12dc801ac9b293821f75bdd1ed0ef *man/rinv.Rd

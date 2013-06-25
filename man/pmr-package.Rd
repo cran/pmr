@@ -11,8 +11,8 @@ Probability models for ranking data.
 \tabular{ll}{
 Package: \tab pmr\cr
 Type: \tab Package\cr
-Version: \tab 1.2.0\cr
-Date: \tab 2013-01-16\cr
+Version: \tab 1.2.1\cr
+Date: \tab 2013-06-25\cr
 Depends: \tab stats4, graphics\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
