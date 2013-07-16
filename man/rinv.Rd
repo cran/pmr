@@ -5,7 +5,7 @@
 Inverse of a ranking dataset.
 }
 \description{
-Computing the inverse of a ranking dataset.
+Computing the inverse of a summarized (or aggregated) ranking dataset. The function rankagg can be used to created a summarized ranking dataset from individual rankings.
 }
 \usage{
 rinv(dset)

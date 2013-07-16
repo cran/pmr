@@ -8,7 +8,7 @@ Multidimensional preference analysis.
 Display a 2D plot of the position of both judges and items. The items are labeled with consecutive numbers 1, 2, ..., k while the judges are presented as vectors pointing from the origin to their most preferred items.
 }
 \usage{
-mdpref(dset,rank.vector=FALSE)
+mdpref(dset,rank.vector=FALSE,ndim=2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -18,6 +18,9 @@ a ranking dataset
 \item{rank.vector}{
 The vectors of the rankings at default will be displayed if the value is set to TRUE. 
 }
+\item{ndim}{
+The number of dimensions extracted from the singular value decomposition.
+}
 }
 \details{
 Multidimenional preference analysis is a dimension reduction technique which aims to project the high-dimensional ranking data into 2D or 3D plot.  Dimension reduction is done using singular value decomposition. Note that the perpendicular projection of the item points onto a judge vector represents the ranking of these items by this judge.
@@ -25,7 +28,7 @@ Multidimenional preference analysis is a dimension reduction technique which aim
 \value{
 \item{item}{Coordinates of the items.}
 \item{ranking}{Coordinates of the rankings.}
-\item{explain}{Proportion of variance explained by the first two dimensions.}
+\item{explain}{Proportion of variance explained by the number of dimensions specified.}
 }
 \references{
 Carroll, J. D. (1972) Individual differences and multidimensional scaling. In Shepard, R. N., Ronney, A. K., and Nerlove, S. B. (eds.) 

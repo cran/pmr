@@ -9,7 +9,7 @@ Ranking of 5 items according to the similarity with the word "song".
 }
 \usage{data(song)}
 \format{
-  A data frame with 98 observations on the following 6 variables.
+  A data frame with 83 observations on the following 6 variables.
   \describe{
     \item{\code{X1}}{the rank of word "score"}
 	\item{\code{X2}}{the rank of word "instrument"}

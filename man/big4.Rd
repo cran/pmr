@@ -5,7 +5,7 @@
 big4
 }
 \description{
-Ranking of 4 English Premier League teams from season 1992-1993 to 2009-2010.
+Ranking of 4 English Premier League teams from season 1992-1993 to 2012-2013.
 }
 \usage{data(big4)}
 \format{
@@ -22,10 +22,10 @@ Ranking of 4 English Premier League teams from season 1992-1993 to 2009-2010.
 The comparative performance of the "Big Four" since the start of the English Premier League.
 }
 \source{
-Wikipedia. (2010) http://en.wikipedia.org/wiki/Premier_League
+Wikipedia. (2013) http://en.wikipedia.org/wiki/Premier_League
 }
 \references{
-Wikipedia. (2010) http://en.wikipedia.org/wiki/Premier_League
+Wikipedia. (2013) http://en.wikipedia.org/wiki/Premier_League
 }
 \examples{
 data(big4)

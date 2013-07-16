@@ -1,4 +1,4 @@
-rankplot <- function(dset, trans=FALSE){
+rankplot <- function(dset, trans=FALSE, label.type="ranking", circle.col="black", circle.bg=FALSE){
 require(graphics)
 nitem <- ncol(dset)-1
 test <- matrix(data = 0, nrow = factorial(nitem), ncol = nitem, byrow = TRUE)
@@ -56,15 +56,37 @@ freq[j] <- test2[i,4]
 }
 }
 }
+
+## A|B|C as label
+if (label.type=="item"){
+label[1] <- "ABC"
+label[2] <- "BAC"
+label[3] <- "ACB"
+label[4] <- "BCA"
+label[5] <- "CAB"
+label[6] <- "CBA"
+}
+
+## ordering as label
+if (label.type=="ordering"){
+label[1] <- "123"
+label[2] <- "213"
+label[3] <- "132"
+label[4] <- "231"
+label[5] <- "312"
+label[6] <- "321"
+}
+
 x = c(0,1,1.5,1,0,-0.5)
 y = c(0,0,-0.866,-1.732,-1.732,-0.866)
-symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE)
+plot(x,y,axes=FALSE,ann=FALSE,xaxt="n",yaxt="n")
+symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE, add=TRUE, fg=circle.col, bg=circle.bg)
 text(x,y,labels=label)
 polygon(x,y)
 }
 
 if (nitem==4){
-plot(c(0,3), c(0,-3), xlab=" ", ylab=" ", type="n")
+plot(c(0,3), c(0,-3), xlab=" ", ylab=" ", type="n", axes=FALSE,ann=FALSE,xaxt="n",yaxt="n")
 # draw the labels and the circles
 label <- rep(0,24)
 freq <- rep(0,24)
@@ -79,15 +101,69 @@ freq[j] <- test2[i,5]
 }
 }
 
+# ordering as label
+if (label.type=="ordering"){
+label[1] <- "1234"
+label[2] <- "2134"
+label[3] <- "1324"
+label[4] <- "2314"
+label[5] <- "3124"
+label[6] <- "3214"
+label[7] <- "1243"
+label[8] <- "2143"
+label[9] <- "1342"
+label[10] <- "2341"
+label[11] <- "3142"
+label[12] <- "3241"
+label[13] <- "1423"
+label[14] <- "2413"
+label[15] <- "1432"
+label[16] <- "2431"
+label[17] <- "3412"
+label[18] <- "3421"
+label[19] <- "4123"
+label[20] <- "4213"
+label[21] <- "4132"
+label[22] <- "4231"
+label[23] <- "4312"
+label[24] <- "4321"
+}
+# A|B|C|D as label
+if (label.type=="item"){
+label[1] <- "ABCD"
+label[2] <- "BACD"
+label[3] <- "ACBD"
+label[4] <- "BCAD"
+label[5] <- "CABD"
+label[6] <- "CBAD"
+label[7] <- "ABDC"
+label[8] <- "BADC"
+label[9] <- "ACDB"
+label[10] <- "BCDA"
+label[11] <- "CADB"
+label[12] <- "CBDA"
+label[13] <- "ADBC"
+label[14] <- "BDAC"
+label[15] <- "ADCB"
+label[16] <- "BDCA"
+label[17] <- "CDAB"
+label[18] <- "CDBA"
+label[19] <- "DABC"
+label[20] <- "DBAC"
+label[21] <- "DACB"
+label[22] <- "DBCA"
+label[23] <- "DCAB"
+label[24] <- "DCBA"
+}
 if (trans==FALSE){
-x <- c(0.76,1.26,0.55,1.51,0.77,1.24,1.15,1.61,0.44,2.2,0.64,1.98,1.27,2.23,1,2.55,1.53,2.15,1.88,2.38,1.66,2.72,1.98,2.56)
-y <- c(-1.02,-0.56,-1.93,-0.24,-1.7,-0.4,-1.43,-1,-1.22,-0.4,-0.95,-0.58,-2.04,-1.15,-2.33,-0.88,-1.93,-1.36,-2.23,-1.77,-2.55,-1.55,-2.37,-1.83)
+x <- c(0.76,1.26,0.44,1.51,0.64,1.24,1.15,1.61,0.55,2.2,0.77,1.98,1.27,2.23,1,2.55,1.53,2.15,1.88,2.38,1.66,2.72,1.98,2.56)
+y <- c(-1.02,-0.56,-1.22,-0.24,-0.95,-0.4,-1.43,-1,-1.93,-0.4,-1.7,-0.58,-2.04,-1.15,-2.33,-0.88,-1.93,-1.36,-2.23,-1.77,-2.55,-1.55,-2.37,-1.83)
 }
 else {
 x <- c(1,1.66,0.55,1.98,0.77,1.53,1.27,1.88,0.44,2.56,0.64,2.15,1.15,2.38,0.76,2.72,1.24,1.98,1.61,2.23,1.26,2.55,1.51,2.2)
 y <- c(-2.33,-2.55,-1.93,-2.37,-1.70,-1.93,-2.04,-2.23,-1.22,-1.83,-0.95,-1.36,-1.43,-1.77,-1.02,-1.55,-0.4,-0.58,-1,-1.15,-0.56,-0.88,-0.24,-0.4)
 }
-symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE)
+symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE,add=TRUE, fg=circle.col, bg=circle.bg)
 text(x,y+0.1,labels=label)
 
 # draw the truncated octahedron
