@@ -29,7 +29,7 @@ sum(ll)
 
 out1 <- optim(rep(1,nitem), loglik_pl, NULL, method = "BFGS", hessian = TRUE)
 ##out1 <- mle(minuslogl = loglik_pl, start = list(util=rep(1,nitem)), method = "BFGS", nobs=sum(dset[,nitem+1]))
-require(stats4)
+##require(stats4)
 test <- matrix(data = 0, nrow = factorial(nitem), ncol = nitem, byrow = TRUE)
 temp1 <- 1:nitem
 i <- 1

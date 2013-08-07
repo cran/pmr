@@ -58,7 +58,7 @@ ll
 
 ## out1 <- optim(rep(0,ncov*nitem-ncov), loglik_rol, NULL, method = "BFGS", hessian = TRUE)
 out1 <- nlm(loglik_rol, rep(0,ncov*nitem-ncov), hessian=TRUE)
-require(stats4)
+##require(stats4)
 message("Maximum Likelihood Estimation of the Rank-ordered Logit Model")
 out2 <- new("mle")
 out2@coef <- out1$estimate

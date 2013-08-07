@@ -1,5 +1,5 @@
 rankplot <- function(dset, trans=FALSE, label.type="ranking", circle.col="black", circle.bg=FALSE){
-require(graphics)
+##require(graphics)
 nitem <- ncol(dset)-1
 test <- matrix(data = 0, nrow = factorial(nitem), ncol = nitem, byrow = TRUE)
 temp1 <- 1:nitem

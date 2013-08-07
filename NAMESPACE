@@ -1,2 +1,2 @@
-import(stats4,graphics)
+import(stats4)
 exportPattern("^[[:alpha:]]+")

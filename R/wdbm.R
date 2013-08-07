@@ -176,7 +176,7 @@ ss[j] <- (fitted[j] - test3[j,(nitem+1)])^2/fitted[j]
 
 #lst <- list(modal.ranking=modal, loglik=up$value, par=up$par, se=(diag(solve(up$hessian)))^0.5, fit.value=fitted, residual=sum(ss))
 #return(lst)
-require(stats4)
+##require(stats4)
 message("Maximum Likelihood Estimation of the Weighted Distance-based Model")
 dtype_full <- "Weighted Kendall's tau"
 if (dtype == "rho") dtype_full <- "Weighted Spearman's rho"

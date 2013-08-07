@@ -26,7 +26,16 @@ message("Please check a_{ij} = 1/a_{ij}")
 if (ncol(dset) == nrow(dset) && recip==0){
 
 ## Eigenvector Method
-weight <- Re(eigen(dset)$vector[1,])
+## weight <- Re(eigen(dset)$vector[1,])
+## nth root of the product of the values are used to estimate the eigenvalue
+weight <- 1:nitem
+for (i in 1:nitem){
+weight[i] <- prod(dset[i,])^(1/nitem)
+}
+temp_sum <- sum(weight)
+for (i in 1:nitem){
+weight[i] <- weight[i]/temp_sum
+}
 lambda_max <- Re(eigen(dset)$values[1])
 CI <- (lambda_max-nitem)/(nitem-1)
 

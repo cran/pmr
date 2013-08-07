@@ -105,7 +105,7 @@ sum(ll)
 }
 
 out1 <- optim(rep(1,(nitem-1)), loglik_dbm, NULL, method = "BFGS", hessian = TRUE)
-require(stats4)
+##require(stats4)
 ## compute expected value
 ed <- rep(0,factorial(nitem))
 for (j in 1:factorial(nitem)){
