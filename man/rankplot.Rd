@@ -8,7 +8,7 @@ Visualizing rankings of 3 or 4 items by plot.
 Display rankings of 3 items by hexagon and 4 items by truncated octahedron. Each line linking two points represents a Kendall distance of one. The size of the point is proportional to the frequency of that particular ranking.
 }
 \usage{
-rankplot(dset,trans=FALSE,label.type="ranking", circle.col="black", circle.bg=FALSE)
+rankplot(dset,trans=FALSE,label.type="item", circle.col="black", circle.bg=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -19,7 +19,7 @@ a ranking dataset
 (For 4-item ranking dataset) Another representation of the rankings. 
 }
 \item{label.type}{
-The type of label for rankings to be displayed (default is ranking). ranking : ranking, ordering: ordering with item numbers, item: ordering with alphabets
+The type of label for rankings to be displayed (default is item). ranking : ranking, ordering: ordering with item numbers, item: ordering with alphabets
 }
 \item{circle.col}{
 The colour of the circles (default is black).

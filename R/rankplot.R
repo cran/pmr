@@ -1,5 +1,5 @@
-rankplot <- function(dset, trans=FALSE, label.type="ranking", circle.col="black", circle.bg=FALSE){
-##require(graphics)
+rankplot <- function(dset, trans=FALSE, label.type="item", circle.col="black", circle.bg=FALSE){
+library(graphics)
 nitem <- ncol(dset)-1
 test <- matrix(data = 0, nrow = factorial(nitem), ncol = nitem, byrow = TRUE)
 temp1 <- 1:nitem
@@ -60,26 +60,26 @@ freq[j] <- test2[i,4]
 ## A|B|C as label
 if (label.type=="item"){
 label[1] <- "ABC"
-label[2] <- "BAC"
-label[3] <- "ACB"
-label[4] <- "BCA"
+label[2] <- "ACB"
+label[3] <- "BCA"
+label[4] <- "CBA"
 label[5] <- "CAB"
-label[6] <- "CBA"
+label[6] <- "BAC"
 }
 
-## ordering as label
-if (label.type=="ordering"){
-label[1] <- "123"
-label[2] <- "213"
-label[3] <- "132"
-label[4] <- "231"
-label[5] <- "312"
-label[6] <- "321"
-}
+## rank as label
+##if (label.type=="ordering"){
+##label[1] <- "123"
+##label[2] <- "213"
+##label[3] <- "132"
+##label[4] <- "231"
+##label[5] <- "312"
+##label[6] <- "321"
+##}
 
 x = c(0,1,1.5,1,0,-0.5)
 y = c(0,0,-0.866,-1.732,-1.732,-0.866)
-plot(x,y,axes=FALSE,ann=FALSE,xaxt="n",yaxt="n")
+plot(x,y,axes=FALSE,ann=FALSE,xaxt="n",yaxt="n", xlim=c(-1.482,2.982), ylim=c(-2.232,2.232))
 symbols(x,y,circles=freq^0.5/sum(freq^0.5)/2,inches=FALSE, add=TRUE, fg=circle.col, bg=circle.bg)
 text(x,y,labels=label)
 polygon(x,y)
