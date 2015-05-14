@@ -47,7 +47,7 @@ deno <- deno - exp(util_combine[i,oset[i,j]])
 
 ll <- 0
 for (i in 1:nrow(oset)){
-if (pr[i]>0.0000000000000001){
+if (pr[i]>0.0000000000000001 & !is.na(pr[i])){
 ll <- ll - log(pr[i])
 }
 else{}
