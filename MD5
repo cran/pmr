@@ -1,5 +1,5 @@
-0cd48c2de43f61e1004ee7014ae6add7 *DESCRIPTION
-e3bdc58a67f73b0d9eb94c64c4b60640 *NAMESPACE
+1d548eb9b6c99078ccb0c2b86bd09c15 *DESCRIPTION
+fedefaf916925e3dec3e2973ab52c6e7 *NAMESPACE
 a59224e0057eda8448af5ddffde7fd86 *R/ahp.R
 6b106b72c5f8e15fc6e1dae20a597bf4 *R/dbm.R
 62ec1c730ab3035da8f3db41322ef938 *R/destat.R
@@ -13,12 +13,12 @@ c372d2b64d235580c9a270fb09666893 *R/rankagg.R
 f2d68168452eb7ddf0ca010bde9629f5 *R/rinv.R
 99546f64a105590d92526dd90b417801 *R/rol.R
 a2fe2694797c1f883d51fab577020e6c *R/wdbm.R
-7fa7b06b5745ec579abbdbb23d106dce *data/big4.rda
-74f8d7bdc63d3b687d4551073396c59f *data/breasttissue.rda
-4c7b525c4c09bd84d8d17cfc79b893a5 *data/idea.rda
-f8dcc9cfb6bc41c6ee54415b1cb0c8ec *data/leisure.black.rda
-56ccc7a9a2ac90832ba8533783a7e335 *data/leisure.white.rda
-a0a8af6f29b380b5ed1c0f10be7fee84 *data/song.rda
+d09f9722e77391d4a11f50cf8f25db39 *data/big4.rda
+67492431b36abdec05dbf12a8b5f3adf *data/breasttissue.rda
+ffd817dc6f36720858eceaaf9c538bb2 *data/idea.rda
+fcd90aa16e309cf14c5e455953ecbc7c *data/leisure.black.rda
+1ab717d59c3d0fcb2baad3478c2f7436 *data/leisure.white.rda
+f9fdf7207ac0b7076588d975ceee6c42 *data/song.rda
 b0c8e1ae9814f563625cabd0d55bd737 *man/ahp.Rd
 3fbaad11f08a392d3d952f7b24f42951 *man/big4.Rd
 0a4bd6104e8163ece43147f4764b7cbf *man/breasttissue.Rd

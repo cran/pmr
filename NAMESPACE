@@ -1,2 +1,6 @@
 import(stats4)
 exportPattern("^[[:alpha:]]+")
+
+importFrom("graphics", "lines", "text")
+importFrom("methods", "new")
+importFrom("stats", "nlm", "optim", "sd", "weighted.mean")
